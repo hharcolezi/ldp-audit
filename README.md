@@ -1,6 +1,16 @@
 # ldp-audit
 
 A Python package for auditing Local Differential Privacy (LDP) protocols.
+LDP-Audit is a work in progress, and we expect to release new versions frequently.
+The tool and framework accompains our PETS 2024 paper:
+```
+@article{arcolezi2023revealing,
+  title={Revealing the True Cost of Local Privacy: An Auditing Perspective},
+  author={Arcolezi, H{\'e}ber H and Gambs, S{\'e}bastien},
+  journal={arXiv preprint arXiv:2309.01597},
+  year={2023}
+}
+```
 
 ## Overview
 
