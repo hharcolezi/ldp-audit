@@ -16,9 +16,9 @@ from multi_freq_ldpy.pure_frequency_oracles.LH import LH_Client
 from multi_freq_ldpy.pure_frequency_oracles.HE import HE_Client
 
 # Our imports
-from utils import setting_seed, find_tresh
-from base_auditor import LDPAuditor
-from approximate_ldp import find_scale, GM_Client
+from .utils import setting_seed, find_tresh
+from .base_auditor import LDPAuditor
+from .approximate_ldp import find_scale, GM_Client
 
 class LongitudinalLDPAuditor(LDPAuditor):
     """
