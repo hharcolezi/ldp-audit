@@ -12,18 +12,6 @@ The tool and framework accompanies our PETS 2024 paper:
 }
 ```
 
-## Overview
-
-The `ldp-audit` package provides tools for auditing the privacy guarantees of various Local Differential Privacy (LDP) protocols. It includes base auditors for general LDP protocols and specialized auditors for protocols like Local Hashing Only (LHO), longitudinal data, and multidimensional data. The package supports both pure and approximate LDP protocols.
-
-## Features
-
-- Auditing of multiple LDP protocols including Generalized Randomized Response (GRR), Optimal Unary Encoding (OUE), and more.
-- Specialized auditing for Local Hashing Only (LHO) protocols.
-- Support for auditing longitudinal data collection protocols.
-- Support for auditing multidimensional data protocols.
-- Integration with both `multi-freq-ldpy` and `pure-ldp` packages.
-
 ## Installation
 
 To install the package and its dependencies, you can use the following commands:
@@ -32,6 +20,17 @@ To install the package and its dependencies, you can use the following commands:
 git clone https://github.com/hharcolezi/ldp-audit.git
 cd ldp-audit
 pip install -r requirements.txt
+```
+
+## Reproducing our paper's experiment
+
+```bash
+python experiment_1.py
+python experiment_2.py
+python experiment_3.py
+python experiment_4.py
+python experiment_5.py
+python experiment_6.py
 ```
 
 ## Usage
