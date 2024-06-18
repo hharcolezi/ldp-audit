@@ -2,7 +2,7 @@
 
 A Python package for auditing Local Differential Privacy (LDP) protocols.
 LDP-Audit is a work in progress, and we expect to release new versions frequently.
-The tool and framework accompains our PETS 2024 paper:
+The tool and framework accompanies our PETS 2024 paper:
 ```
 @article{arcolezi2023revealing,
   title={Revealing the True Cost of Local Privacy: An Auditing Perspective},
@@ -29,7 +29,7 @@ The `ldp-audit` package provides tools for auditing the privacy guarantees of va
 To install the package and its dependencies, you can use the following commands:
 
 ```bash
-git clone https://github.com/your_username/ldp-audit.git
+git clone https://github.com/hharcolezi/ldp-audit.git
 cd ldp-audit
 pip install -r requirements.txt
 ```
