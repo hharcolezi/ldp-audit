@@ -7,9 +7,9 @@ from statsmodels.stats.proportion import proportion_confint
 import xxhash
 
 # Our imports
-from utils import setting_seed, LHO_Client
-from attacks import attack_lh
-from base_auditor import LDPAuditor
+from .utils import setting_seed, LHO_Client
+from .attacks import attack_lh
+from .base_auditor import LDPAuditor
 
 class LHOAuditor(LDPAuditor):
     """
