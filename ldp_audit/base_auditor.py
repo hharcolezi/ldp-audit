@@ -18,9 +18,9 @@ from multi_freq_ldpy.pure_frequency_oracles.HE import HE_Client
 from pure_ldp.frequency_oracles.unary_encoding import UEClient, UEServer
 
 # Our imports
-from utils import setting_seed, find_tresh
-from attacks import attack_ss, attack_ue, attack_the, attack_she, attack_lh, attack_gm
-from approximate_ldp import find_scale, GM_Client, AGRR_Client, ASUE_Client, ALH_Client
+from .utils import setting_seed, find_tresh
+from .attacks import attack_ss, attack_ue, attack_the, attack_she, attack_lh, attack_gm
+from .approximate_ldp import find_scale, GM_Client, AGRR_Client, ASUE_Client, ALH_Client
 
 # Imports for parallelization
 import ray
