@@ -11,9 +11,9 @@ import xxhash
 from multi_freq_ldpy.mdim_freq_est.RSpFD_solution import RSpFD_GRR_Client, RSpFD_UE_zero_Client, RSpFD_UE_rnd_Client
 
 # Our imports
-from utils import setting_seed
-from base_auditor import LDPAuditor
-from attacks import attack_ue
+from .utils import setting_seed
+from .base_auditor import LDPAuditor
+from .attacks import attack_ue
 
 class MultidimensionalLDPAuditor(LDPAuditor):
     """
