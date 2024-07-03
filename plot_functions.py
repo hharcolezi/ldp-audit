@@ -16,7 +16,7 @@ params = {'axes.titlesize':'18',
           }
 matplotlib.rcParams.update(params)
 plt.rcParams["mathtext.fontset"] = "cm"
-plt.rc('text', usetex=True)
+plt.rc('text', usetex=False)
 plt.rc('font', family='serif')
 markers = ['s', 'd', 'X', 'o', 'v', '*', '^', '8', 'h', '+']
 
