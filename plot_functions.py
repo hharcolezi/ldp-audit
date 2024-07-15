@@ -137,7 +137,6 @@ def plot_results_approx_ldp_protocols(df: pd.DataFrame, analysis: str, lst_proto
 
         ax[0, 0].legend(columnspacing=0.3, ncol=8, loc='upper center', bbox_to_anchor=(1.05, 1.5))
         plt.savefig('results/fig_results_'+analysis+'.pdf', dpi=500, bbox_inches = 'tight',pad_inches = 0.1)
-        plt.show()
 
     return plt.show()
 
@@ -198,6 +197,7 @@ def plot_results_approx_ldp_delta_impact(df_delta_imp: pd.DataFrame, analysis: s
         handles, labels = ax[0, 0].get_legend_handles_labels()
         fig.legend(handles, labels, columnspacing=0.8, handlelength=1.5, loc='upper center', bbox_to_anchor=(0.49, 1.0), ncol=n_delta)
         plt.savefig('results/fig_results_'+analysis+'_k_'+str(k)+'.pdf', dpi=500, bbox_inches = 'tight',pad_inches = 0.1)
+        plt.show()
     
     return plt.show()
 
@@ -263,22 +263,6 @@ def plot_results_longitudinal_pure_ldp_protocols(df_pure_long: pd.DataFrame, df_
                 variation_k = []
                 for idx_tau, tau in enumerate(lst_tau):
                     df_eps = df_seq.loc[(df_seq.protocol == protocol) & (df_seq.tau == tau) & (df_seq.k == k) & (df_seq.epsilon == epsilon)]['eps_emp'].clip(0)
-    
-                    # # turnaround missing exp
-                    # if df_eps.shape[0] == 0:
-                    #     if protocol in dic_missing.keys():
-                    #         if protocol in lst_protocol_pure:
-                    #             protocol_tst = 'THE'
-                    #             df_eps = df_seq.loc[(df_seq.protocol == protocol_tst) & (df_seq.tau == tau) & (df_seq.k == k) & (df_seq.epsilon == epsilon)]['eps_emp'].clip(0)
-                    #             results_k.append(df_eps.mean() * 0.95)
-                    #             variation_k.append(df_eps.std())
-                                                            
-                    #         else:
-                    #             protocol_tst = 'GM'
-                    #             df_eps = df_seq.loc[(df_seq.protocol == protocol_tst) & (df_seq.tau == tau) & (df_seq.k == k) & (df_seq.epsilon == epsilon)]['eps_emp'].clip(0)
-                    #             results_k.append(df_eps.mean() * np.array(dic_diff['AGM'][epsilon][idx_tau]) / np.array(dic_diff['GM'][epsilon][idx_tau]))
-                    #             variation_k.append(df_eps.std())
-                    # else:
                     results_k.append(df_eps.mean())
                     variation_k.append(df_eps.std())
                     
