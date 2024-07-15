@@ -47,11 +47,11 @@ Example:
 from ldp_audit.base_auditor import LDPAuditor
 
 # Define audit parameters
-seed = 42
-nb_trials = int(1e6)
-alpha = 1e-2
-epsilon = 1
-k = 2
+seed = 42 # for reproducibility
+nb_trials = int(1e6) # trial count should be high, e.g., >=10^6
+alpha = 1e-2 # confidence level should be small, e.g., 0.05, 0.01
+epsilon = 1 # the theoretical privacy parameter
+k = 2 # the domain size
 
 print('=====Auditing pure LDP protocols=====')
 delta = 0.0
@@ -73,11 +73,10 @@ for protocol in approx_ldp_protocols:
 ```	
 
 ## To Do
-Deploy the tool as a Python package to PyPI for easier installation and integration.
+- Deploy the tool as a Python package to PyPI for easier installation and integration.
 - Add more detailed documentation and examples.
 - Expand the testing suite for better coverage.
 - Optimize performance for large-scale data.
-
 
 ## Contributions
 We welcome contributions! Please fork the repository and submit pull requests.
