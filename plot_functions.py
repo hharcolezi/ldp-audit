@@ -113,14 +113,21 @@ def plot_results_approx_ldp_protocols(df: pd.DataFrame, analysis: str, lst_proto
 
             results_k = []
             variation_k = []
-            for epsilon in lst_eps:
-                df_eps = df.loc[(df.protocol == protocol) & (df.epsilon == epsilon) & (df.k == k)]['eps_emp'].clip(0)
-                results_k.append(df_eps.mean())
-                variation_k.append(df_eps.std())
+            if protocol != "GM":
+                for epsilon in lst_eps:
+                    df_eps = df.loc[(df.protocol == protocol) & (df.epsilon == epsilon) & (df.k == k)]['eps_emp'].clip(0)
+                    results_k.append(df_eps.mean())
+                    variation_k.append(df_eps.std())
+            else:
+                for epsilon in [eps for eps in lst_eps if eps <= 1]:
+                    df_eps = df.loc[(df.protocol == protocol) & (df.epsilon == epsilon) & (df.k == k)]['eps_emp'].clip(0)
+                    results_k.append(df_eps.mean())
+                    variation_k.append(df_eps.std())
+            
             
             std_minus = np.array(results_k) - np.array(variation_k)
             std_plus = np.array(results_k) + np.array(variation_k)        
-            ax[r, c].fill_between(range(len(lst_eps)), std_minus, std_plus, alpha=0.3)
+            ax[r, c].fill_between(range(len(variation_k)), std_minus, std_plus, alpha=0.3)
             ax[r, c].plot(results_k, label = 'k={}'.format(k), marker = markers[mkr_idx])
             
             mkr_idx+=1
