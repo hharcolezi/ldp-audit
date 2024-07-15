@@ -2,7 +2,8 @@
 
 A tool for auditing Locally Differentially Private (LDP) protocols. 
 LDP-Audit is a work in progress, and we expect to release new versions frequently.
-The tool and framework accompanies our PETS 2024 paper:
+The tool and framework accompanies our PETS 2024 paper ["Revealing the True Cost of Locally Differentially Private Protocols: An Auditing Perspective
+"](https://petsymposium.org/popets/2024/popets-2024-0110.php):
 
 ```
 @article{arcolezi2024revealing,
